@@ -63,14 +63,14 @@ public:
 		}
 		unsigned char *pixel = inputTexture->getPixel(posX, posY);
 		bool isNotWalkable = isGreen(pixel);
-		return isNotWalkable;
+		return !isNotWalkable;
 	}
 	
 	std::vector<Position> getAdjacentNodes(int posX, int posY)
 	{
 		std::vector<Position> result;
 		// Add four adjacent nodes to results
-		if (isWalkable(posX-1,posY))
+		if (isWalkable(posX+1,posY))
 		{
 			result.push_back(Position(posX + 1, posY));
 		}
@@ -80,7 +80,7 @@ public:
 		}
 		if (isWalkable(posX, posY+1))
 		{
-			result.push_back(Position(posX, posX + 1));
+			result.push_back(Position(posX, posY + 1));
 		}
 		if (isWalkable(posX, posY-1))
 		{

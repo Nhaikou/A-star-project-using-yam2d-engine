@@ -9,7 +9,7 @@ public:
 	// Return search node from given position, if it exists. Return 0 otherwise.
 	SearchNode *findFromOpenList(const Position &pos)
 	{
-		for (size_t i = 0; i < openList.size(); i++)
+		for (size_t i = 0; i < openList.size(); ++i)
 		{
 			if (openList[i]->pos == pos)
 			{

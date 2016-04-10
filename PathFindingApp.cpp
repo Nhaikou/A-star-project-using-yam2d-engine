@@ -250,7 +250,7 @@ bool PathFindingApp::doPathfinding(int startX, int startY, int endX, int endY)
 
 			// 3. for each square T in S's walkable adjacent tiles:
 			std::vector<Position> adjacentNodes = searchLevel.getAdjacentNodes(prev->pos.first, prev->pos.second);
-			for (size_t i = 0; i < adjacentNodes.size(); i++)
+			for (size_t i = 0; i < adjacentNodes.size(); ++i)
 			{
 				// If T is in the closed list : Ignore it.
 				if (closedList.isInClosedList(adjacentNodes[i]))
@@ -298,9 +298,9 @@ bool PathFindingApp::doPathfinding(int startX, int startY, int endX, int endY)
 	return true;
 
 	// TODO: Remove that search end and delay hack as seen below..
-	static int i = 0;
-	i = ((i+1)%10); // 10*100ms = ~500 ms of total
-	Sleep(100);
-	return i==0;
+	//static int i = 0;
+	//i = ((i+1)%10); // 10*100ms = ~500 ms of total
+	//Sleep(100);
+	//return i==0;
 }
 
