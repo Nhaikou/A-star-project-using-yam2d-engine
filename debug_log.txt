@@ -1,3 +1,3 @@
-Start finding path from input image: "input.png"
-Path find done. Time spent 7.289 seconds
+Start finding path from input image: "testMap.png"
+Path find done. Time spent 0.924 seconds
 

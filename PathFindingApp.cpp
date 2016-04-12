@@ -87,7 +87,7 @@ bool PathFindingApp::update(yam2d::ESContext* ctx, float deltaTime)
 	{
 		// Delete old and load new
 		m_texturePathFound = 0;
-		const char* const inFileName = "input.png";
+		const char* const inFileName = "testMap.png";
 
 		char buf[100];
 		sprintf_s(buf, "Start finding path from input image: \"%s\"", inFileName);
